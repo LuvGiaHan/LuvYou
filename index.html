@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Yeuuu</title>
+  </head>
+  <body>
+    <div class="container" onclick="hidden_envelope()">
+      <div class="valentines">
+        <div class="envelope">
+          <div class="card">
+            <div class="text">
+              Yêu <br />
+              Gia Hân <br />
+              nhắmm!
+            </div>
+            <div class="heart"></div>
+          </div>
+          <div class="heartt"></div>
+        </div>
+        <div class="triangle-down"></div>
+        <div class="front"></div>
+      </div>
+    </div>
+    <script>
+      const triangle = document.querySelector(".triangle-down");
+      const heart = document.querySelector(".heartt");
+      const card = document.querySelector(".card");
+      function hidden_envelope() {
+        heart.style.transform = "scale(1.5) rotate(45deg)";
+        setTimeout(function () {
+          heart.style.opacity = 0;
+        }, 50);
+        setTimeout(function () {
+          triangle.style.top = "0";
+          triangle.style.transform = "rotate3d(1, 0, 0, 180deg)";
+        }, 800);
+        setTimeout(function () {
+          card.style.opacity = "1";
+          card.style.transform = "translateY(-100px)";
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>
